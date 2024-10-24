@@ -1,6 +1,9 @@
+import pandas as pd
+import sqlite3
 
 class Programa:
-    def __init__(self):
+    def __init__(self, db='db.sqlite3'):
+        self.conn = sqlite3.connect(db)
         self.menu()
 
     def menu(self):
@@ -26,5 +29,5 @@ class Programa:
                     print('Voce saiu')
                     break
         
-        
-teste = Programa()
+    def criar(self):
+        pass
